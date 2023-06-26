@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>お問い合わせ - WebDesign</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body id="top">
+    <div class="container">
+        <header>
+            <h1><a href="index.html">WebDesign</a></h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li> <a href="next.html">下層ページの構成</a></li>
+                <li> <a href="contact.html" class="active">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- next.htmlの全コピして、不要な部分を削除した -->
+            <article>
+                <h1>お問い合わせ</h1>
+                <p>WebDesignについてのご質問・ご意見は、下記フォームよりお気軽にお問い合わせください。</p>
+                <aside>
+                    <ul>
+                        <li>必要事項を記入し、「送信」をクリックしてください。</li>
+                        <li>ご登録いただいた個人情報は、お問い合わせ内容の確認以外には使用いたしません。</li>
+                        <li>※は必須項目です。</li>
+                    </ul>
+                </aside>
+                <!-- ★6/15フォームは、入力は必要最小限がよい -->
+                <form action="#" method="get">
+                    <dl>
+                        <div>
+                            <!-- ★<dt><dd>でセットで入力する。 -->
+                            <!-- placeholder="ウェブデザ 花子と記入される記入例。-->
+                            <!-- requiredは入力必須 -->
+                            <!-- inputだけ入力すると属性も出てくる -->
+                            <dt>お名前<span>※</span></dt>
+                            <dd> <input type="text" placeholder="ウェブデザ 花子" required></dd>
+                        </div>
+                        <div>
+                            <dt> メールアドレス<span>※</span></dt>
+                            <dd><input type="email" placeholder="info@gmail.com" required></dd>
+                        </div>
+                        <div>
+                            <dt>お問い合わせの種類</dt>
+                            <dd>
+                                <!-- ★ラジオボタンは必ずグループにする。nameをつける（何でもよい）。そうすると二者択一になる -->
+                                <!--labelは、ボタンだけを選んでチェックするのでなく、テキストを選択してもラジオボタンを選べるように<label>タグをつける -->
+                                <!-- requiredは入力必須も付けられる -->
+                                <!-- checkedは初期で選べるもの。今回の場合は、お問い合わせが多いと想定しているため初期にしているため使用した -->
+                                <label>
+                                    <input type="radio" name="カテゴリー" checked>
+                                    ご質問
+                                </label>
+                                <label>
+                                    <input type="radio" name="カテゴリー">
+                                    お問い合わせ
+                                </label>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt> 内容</dt>
+                            <!-- ★<textarea>は終了タグが必要 -->
+                            <dd> <textarea></textarea> </dd>
+                        </div>
+                        <!-- ★送信ボタンタグは改行入れない、文字も入れないようにする。最初から表示されてします。また、imgタグ（画像）も入れることができる -->
+                        <p><button>送信</button></p>
+                    </dl>
+                </form>
+
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" alt="ページトップへ"></a></p>
+        <p class="copyright">
+            <small>
+                &copy;2021 WebDesign.
+
+                <span>All Rights Reserved.ved.</span>
+            </small>
+        </p>
+    </footer>
+</body>
+</html>

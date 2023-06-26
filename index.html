@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <!-- ★モバイルの設定に必要な情報↓ -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>WebDesign</title>
+    <!-- ★cssを読み込むときは、ここに<link>タグに入れる。基本的には<title>タグのところに書く。読み込んだ順番に反映される -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body id="top">
+    <div class="container">
+        <!-- サイト名は大見出しh1を設定する -->
+        <!-- homeに戻る設定として、<a>をつける -->
+        <header>
+            <h1><a href="index.html">WebDesign</a></h1>
+        </header>
+
+        <!-- メニューはリスト<ul> ‐ <li> で必ず2つセットで使用する -->
+        <!-- リンク先がない場合は＃を入れておく。リンク先がエラーにならない -->
+        <!-- navタグはメニューにつける -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li> <a href="next.html">下層ページの構成</a></li>
+                <li> <a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <!-- imgは終了タグはない。srcをつける（必須属性）　 altは目の不自由の方も見ているため、画像の内容を読み上げてくれる。ほかには画像が表示されないときに文字が出てくる（任意属性であるけど、基本的には書く）その文字は画像の中に文字を書く。
+★img入力方法
+┗img だけを入力するようにする。srcとaltが出てくる
+┗ctlr＋スペースでファイトを呼び出す
+┗imgにも意味をつけるので、<p>タグをつける。もしくは見出しで画像を使用するのであれば<h1>に使用する場合もある　-->
+
+        <!-- ［メインビジュアル］ -->
+        <p class="visual"><img src="img/web.jpg" alt="Webページ制作言語"></p>
+        <!-- ↑迷ったら<p>タグをつける -->
+
+        <main>
+            <!-- <h2>のタグずつに<section>をつける。 見出しタグには内容をつける。それごとにsectionをつける。もし、内容がなければ<p>をつける-->
+            <section>
+                <h2>TOPページの見出し</h2>
+                <p>TOPページの大見出し（h1）はサイト名に設定するので、mainタグ内は中見出し（h2）から使い始める。</p>
+            </section>
+
+            <section>
+                <h2>セクションとは</h2>
+                <p>見出しとその内容は、sectionタグでグループ化する。小見出しがある場合、中見出し（h2）のsectionの中に小見出し（h3）のsectionが入ることもある。</p>
+            </section>
+
+            <aside>
+                <p>バナーや注意書き、サイドバーなどの補足情報はasideで囲む。</p>
+            </aside>
+        </main>
+    </div>
+    <footer>
+        <!-- <small>は改行しないため、<p>は入れる -->
+        <!-- ★ページ内リンクをつけるときは、id属性をつける。ページトップは自動スクロールするに設定をする -->
+        <p class="pagetop"><a href="#top"><img src="img/gotop.svg" width="32" alt="ページトップへ"></a></p>
+        <p class="copyright">
+            <small>
+                &copy;2021 WebDesign.
+                <!-- スマホのときのみ表示したくないので、<span>を設定する。 -->
+                <span>All Rights Reserved.ved.</span>
+            </small>
+        </p>
+    </footer>
+
+</body>
+</html>
